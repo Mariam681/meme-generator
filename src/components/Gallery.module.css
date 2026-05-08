@@ -1,0 +1,276 @@
+.gallery {
+  animation: fadeIn 0.25s ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.count {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.clearBtn {
+  font-size: 12px;
+  color: var(--danger);
+  background: var(--danger-dim);
+  border: 1px solid rgba(224,82,82,0.2);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.15s;
+}
+
+.clearBtn:hover {
+  background: rgba(224,82,82,0.2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.15s, transform 0.15s;
+  animation: fadeIn 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.imgWrap {
+  position: relative;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.imgWrap:hover .img {
+  transform: scale(1.04);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.imgWrap:hover .overlay {
+  opacity: 1;
+}
+
+.viewLabel {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(245,200,66,0.9);
+  color: #1a1600;
+  padding: 6px 16px;
+  border-radius: 99px;
+}
+
+.cardFooter {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cardInfo {
+  flex: 1;
+  overflow: hidden;
+}
+
+.cardName {
+  display: block;
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardDate {
+  display: block;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 1px;
+}
+
+.cardActions {
+  display: flex;
+  gap: 4px;
+}
+
+.iconBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s;
+}
+
+.iconBtn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.iconBtn.danger:hover {
+  background: var(--danger-dim);
+  color: var(--danger);
+  border-color: rgba(224,82,82,0.3);
+}
+
+/* Empty state */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  text-align: center;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.emptyIcon {
+  color: var(--text-tertiary);
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.emptySub {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  max-width: 280px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.lightboxContent {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  font-family: var(--font-body);
+  transition: background 0.1s;
+}
+
+.closeBtn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.lightboxImg {
+  max-width: 80vw;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightboxFooter {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.lightboxName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.downloadBtn {
+  padding: 8px 16px;
+  background: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+
+.downloadBtn:hover {
+  filter: brightness(1.08);
+}

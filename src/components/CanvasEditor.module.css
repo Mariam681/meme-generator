@@ -1,0 +1,27 @@
+.wrap {
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+}
+
+.canvasContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+.canvas {
+  border-radius: var(--radius-md);
+  max-width: 100%;
+  box-shadow: var(--shadow-md);
+  display: block;
+}
