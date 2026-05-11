@@ -73,8 +73,8 @@ export default function ExportPanel({ getHighResDataUrl, image, textLayers, onSa
     if (publicUrl) return publicUrl;
     const dataUrl = getHighResDataUrl(image, textLayers);
     if (!dataUrl) throw new Error("Pas d'image à uploader");
-    if (IMGBB_API_KEY === 'VOTRE_CLE_IMGBB_ICI') {
-      throw new Error('Clé ImgBB manquante — consultez https://api.imgbb.com');
+    if (IMGBB_API_KEY === 'dd04ab928f0a12135e90c087bde74850') {
+      throw new Error('Clé ImgBB manquante — https://api.imgbb.com');
     }
     const url = await uploadToImgBB(dataUrl);
     setPublicUrl(url);
@@ -133,7 +133,7 @@ export default function ExportPanel({ getHighResDataUrl, image, textLayers, onSa
   }, [image, textLayers]);
 
   const disabled = !image;
-  const noKey = IMGBB_API_KEY === 'VOTRE_CLE_IMGBB_ICI';
+  const noKey = IMGBB_API_KEY === 'dd04ab928f0a12135e90c087bde74850';
 
   return (
     <div className={styles.panel}>
