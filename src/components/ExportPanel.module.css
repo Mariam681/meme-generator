@@ -122,3 +122,59 @@
 .whatsapp:hover:not(:disabled) {
   background: #234d37;
 }
+
+.facebook {
+  background: #1a2f4a;
+  color: #4d8ef0;
+  border-color: #4d8ef033;
+}
+
+.facebook:hover:not(:disabled) {
+  background: #1e3a5c;
+}
+
+.shareHint {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.imgurLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  padding: 8px 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.imgurLabel {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.imgurUrl {
+  font-size: 11px;
+  color: var(--accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.imgurUrl:hover {
+  text-decoration: underline;
+}
