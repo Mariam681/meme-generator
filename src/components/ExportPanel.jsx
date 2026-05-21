@@ -3,7 +3,7 @@ import { downloadDataUrl, copyImageToClipboard } from '../utils/memeUtils';
 import styles from './ExportPanel.module.css';
 
 // clé ImgBB obtenue sur https://api.imgbb.com
-const IMGBB_API_KEY = 'dd04ab928f0a12135e90c087bde74850';
+const IMGBB_API_KEY = '87d3e6bb56eba45a27b1ca602d3fae2f';
 
 // Compresse l'image en JPEG < 5MB avant upload
 function compressDataUrl(dataUrl, maxSizeKB = 4000, quality = 0.85) {
